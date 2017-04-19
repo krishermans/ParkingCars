@@ -303,6 +303,8 @@
     <Compile Include="Assets\HoloToolkit\Utilities\Tests\Scripts\PlaneTargetGroupPicker.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Tests\Scripts\TextToSpeechManagerTest.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Tests\Scripts\TextToSpeechOnTap.cs" />
+    <Compile Include="Assets\ParkingSpaceScript.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\CarLoader.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\LookAtCamera.cs" />
   </ItemGroup>
   <ItemGroup>

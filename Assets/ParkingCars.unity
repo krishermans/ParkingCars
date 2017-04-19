@@ -292,6 +292,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1051162102}
+  - component: {fileID: 1051162103}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -314,6 +315,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1051162103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051162101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2795b3e072e1745a4f8c670d64284f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RecognizerStart: 0
+  KeywordsAndResponses:
+  - Keyword: Place Cars
+    KeyCode: 49
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1117172841}
+          m_MethodName: SendMessage
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: PlaceCars
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
 --- !u!1 &1117172838
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +354,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1117172839}
+  - component: {fileID: 1117172841}
+  - component: {fileID: 1117172840}
   m_Layer: 0
   m_Name: ParkingSpace
   m_TagString: Untagged
@@ -342,3 +376,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1117172840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117172838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d34ff5125690c8429e610c0327b1acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Car: {fileID: 1095872379682508, guid: a8d8bb7c38ae1b24cb504c78a61f8b86, type: 2}
+--- !u!114 &1117172841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117172838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0402660fc9d7fe0408f071ab2ac67dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
