@@ -19,11 +19,19 @@ public class ParkingSpaceScript : MonoBehaviour
     public void PlaceCars()
     {
         Debug.Log("Place the cars");
-        CreateCar();
+        var headPosition = Camera.main;
+        var carPosition = headPosition.transform.forward * 3.5f;
+        var carRotation = headPosition.transform.rotation;
+        for (int i = 0; i < 3; i++)
+        {
+            CreateCar(carPosition, carRotation);
+            carPosition += headPosition.transform.right * 0.5f;
+        }   
     }
 
-    private void CreateCar()
+    private void CreateCar(Vector3 position, Quaternion rotation)
     {
-        var c = Instantiate(Car);
+        var c = Instantiate(Car, position, rotation);
+        c.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
     }
 }
