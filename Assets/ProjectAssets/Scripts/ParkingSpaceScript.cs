@@ -1,15 +1,31 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ParkingLotApi.Models;
+#if UNITY_UWP
+using System.Net.Http;
+using Newtonsoft.Json;
+#endif
 
 public class ParkingSpaceScript : MonoBehaviour
 {
     public GameObject Car;
-	
+
+    private int numberOfCars;
+
     // Use this for initialization
-	void Start () {
-		
-	}
+	void Start ()
+    {
+#if UNITY_UWP
+        var uri = new Uri("https://parkinglot-smacos-beta.azurewebsites.net/api/ParkingLots");
+        var client = new HttpClient();
+        var resultstring = client.GetStringAsync(uri).Result;
+        Debug.Log(resultstring);
+        var resultList = JsonConvert.DeserializeObject<List<ParkingLot>>(resultstring);
+        numberOfCars = resultList.Count;
+#endif
+    }
 	
 	// Update is called once per frame
 	void Update () {

@@ -303,8 +303,9 @@
     <Compile Include="Assets\HoloToolkit\Utilities\Tests\Scripts\PlaneTargetGroupPicker.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Tests\Scripts\TextToSpeechManagerTest.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Tests\Scripts\TextToSpeechOnTap.cs" />
-    <Compile Include="Assets\ParkingSpaceScript.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\LookAtCamera.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\Models\ParkingLot.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\ParkingSpaceScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HoloToolkit\Input\Shaders\Cursor.shader" />
